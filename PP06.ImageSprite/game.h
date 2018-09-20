@@ -1,5 +1,5 @@
 #pragma once
-#include "SDL.h"
+#include <SDL.h>
 
 class Game
 {
@@ -10,7 +10,7 @@ public:
 		int width, int height, bool fullscreen);
 
 	void render();
-	void update() {};
+	void update() ;
 	void handleEvents();
 	void clean();
 
@@ -26,5 +26,3 @@ private:
 	SDL_Rect m_destinationRectangle;
 	bool m_bRunning;
 };
-#pragma once
-#pragma once
