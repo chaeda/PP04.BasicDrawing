@@ -15,7 +15,7 @@ bool Game::init(const char* title, int xpos, int ypos,
 		m_bRunning = true;
 
 		// load 부분 대치   
-		if (!TextureManager::Instance()->load("assets/animate-alpha.png", "animate", m_pRenderer))
+		if (!TheTextureManager::Instance()->load("assets/animate-alpha.png", "animate", m_pRenderer))
 		{
 			return false;
 		}

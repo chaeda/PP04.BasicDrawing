@@ -2,6 +2,7 @@
 #include "SDL.h"
 #include "TextureManager.h"
 #include "SDL_image.h"
+#include "Player.h"
 #include <map>
 
 class Game
@@ -16,6 +17,8 @@ public:
 	void handleEvents();
 	void clean();
 	bool running() { return m_bRunning; }
+	GameObject m_go;
+	Player m_player;
 
 
 private:
@@ -25,9 +28,11 @@ private:
 
 
 	int m_currentFrame;
+
 	//TextureManager m_textureManager;
 
 	//SDL_Texture* m_pTexture; // the new SDL_Texture variable
 	//SDL_Rect m_sourceRectangle; // 원본 사각형 
 	//SDL_Rect m_destinationRectangle; // 대상 사각형 
+
 };

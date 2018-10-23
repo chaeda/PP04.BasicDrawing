@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include "SDL.h"
 #include "SDL_image.h"
@@ -37,4 +38,4 @@ private:
 	std::map<std::string, SDL_Texture*> m_textureMap;
 };
 
-//typedef TextureManager TheTextureManager; 
+typedef TextureManager TheTextureManager; 
