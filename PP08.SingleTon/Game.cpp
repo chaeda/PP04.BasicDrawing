@@ -1,9 +1,9 @@
-#include <iostream>
-#include "SDL.h"
-#include "SDL_image.h"
+
 #include "Game.h"
+
 //#include "TextureManager.h"
-#include <map>
+
+using namespace std;
 
 
 bool Game::init(const char* title, int xpos, int ypos,
@@ -27,13 +27,22 @@ bool Game::init(const char* title, int xpos, int ypos,
 
 		}
 
-		m_go.load(100, 100, 128, 82, "animate");
-		m_player.load(300, 300, 128, 82, "animate");
+		m_go = new GameObject();
+		m_player = new Player();
+		m_enemy = new Enemy();
 
-		//m_textureManager.load("assets/animate-alpha.png", "animate", m_pRenderer);
+		m_go->load(100, 100, 128, 82, "animate");
+		m_player->load(300, 300, 128, 82, "animate");
+		m_enemy->load(0, 0, 128, 82, "animate");
+
+		m_gameObjects.push_back(m_go);
+		m_gameObjects.push_back(m_player);
+		m_gameObjects.push_back(m_enemy);
 
 	}
 	else {
+
+
 		return false; // sdl could not initialize
 	}
 	return true;
@@ -42,20 +51,15 @@ bool Game::init(const char* title, int xpos, int ypos,
 
 void Game::render()
 {
-
-SDL_RenderClear(m_pRenderer); // draw colour·Î Áö¿ò
-m_go.draw(m_pRenderer);
-m_player.draw(m_pRenderer);
-SDL_RenderPresent(m_pRenderer); // draw to the screen
+	SDL_RenderClear(m_pRenderer); // clear to the draw colour
+	for (std::vector<GameObject*>::size_type i = 0;
+		i != m_gameObjects.size(); i++)
+	{
+		m_gameObjects[i]->draw(m_pRenderer);
+	}
+	SDL_RenderPresent(m_pRenderer); // draw to the screen
 }
 
-void Game::clean()
-{
-	std::cout << "cleaning game\n";
-	SDL_DestroyWindow(m_pWindow);
-	SDL_DestroyRenderer(m_pRenderer);
-	SDL_Quit();
-}
 
 void Game::handleEvents()
 {
@@ -72,9 +76,23 @@ void Game::handleEvents()
 		}
 	}
 }
-	void Game::update()
+void Game::update()
+{
+	for (std::vector<GameObject*>::size_type i = 0;
+		i != m_gameObjects.size(); i++)
 	{
-		m_go.update();
-		m_player.update();
+		m_gameObjects[i]->update();
 	}
+}
 
+void Game::clean()
+{
+	
+	////m_gameObjects.clear();
+
+	//m_go->clean();
+	//m_player->clean();
+	//m_enemy->clean();
+	/*delete m_pWindow;
+	delete m_pRenderer;*/
+}
