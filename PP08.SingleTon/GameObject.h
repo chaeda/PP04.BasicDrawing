@@ -1,18 +1,16 @@
 #pragma once
-
-#include <SDL.h>
-#include <SDL_image.h>
 #include <iostream>
+#include "SDL.h"
+#include "string.h"
 #include "TextureManager.h"
 
 class GameObject
 {
 public:
-	void load(int x, int y, int width, int height,
-		std::string textureID);
+	void load(int x, int y, int width, int height, std::string textureID); 
 	void draw(SDL_Renderer* pRenderer);
-	virtual void update();
-	virtual void clean() { delete this; };
+	void update();
+	//virtual void clean();
 protected:
 	std::string m_textureID;
 	int m_currentFrame;

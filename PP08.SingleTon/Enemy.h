@@ -1,13 +1,13 @@
 #pragma once
+#include <iostream>
 #include "GameObject.h"
-
 
 class Enemy : public GameObject
 {
 public:
-	/*void load(int x, int y, int width, int height,
+	void load(int x, int y, int width, int height,
 		std::string textureID);
-	void draw(SDL_Renderer* pRenderer);*/
+	void draw(SDL_Renderer* pRenderer);
 	void update();
-	void clean() { delete this; };
+	//	void clean();
 };
