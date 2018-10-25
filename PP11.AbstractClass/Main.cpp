@@ -1,6 +1,6 @@
+#include <SDL.h>
 #include "Game.h"
 #include "GameObject.h"
-#include <SDL.h>
 #include "SDLGameObject.h"
 using namespace std;
 

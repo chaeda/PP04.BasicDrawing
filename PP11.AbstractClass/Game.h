@@ -1,7 +1,8 @@
 #pragma once
 #include <vector>
 #include <map>
-#include "GameObject.h"
+#include "Player.h"
+#include "Enemy.h"
 
 
 Game* Game::s_pInstance = 0;
@@ -36,7 +37,7 @@ private:
 	SDL_Renderer* m_pRenderer;
 	bool m_bRunning;
 
-	int vector<GameObject*> m_gameObjects;
+	 vector<GameObject*> m_gameObjects;
 
 
 	GameObject* m_go;
