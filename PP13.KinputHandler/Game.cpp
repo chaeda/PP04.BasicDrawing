@@ -1,5 +1,7 @@
 #include "Game.h"
 #include "InputHandler.h"
+#include "TextureManager.h"
+
 Game* Game::s_pInstance = 0;
 bool Game::init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen)
 {
@@ -39,20 +41,20 @@ void Game::render()
 	}
 	SDL_RenderPresent(m_pRenderer);
 }
-void Game::clean()
+
+void Game::quit()
 {
-	std::cout << "cleaning game\n";
-	SDL_DestroyWindow(m_pWindow);
-	SDL_DestroyRenderer(m_pRenderer);
-	SDL_Quit();
+	m_bRunning = false;
 }
+
+
+
 void Game::handleEvents()
 {
 	TheInputHandler::Instance()->update();
 }
 
-void Game::clean(){
-TheInputHandler::Instance()->clean();
-
-
+void Game::clean()
+{
+	TheInputHandler::Instance()->clean();
 }
