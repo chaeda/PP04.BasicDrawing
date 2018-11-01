@@ -1,8 +1,6 @@
 #pragma once
-#include "GameObject.h"
-
-
-
+#include "SDL.h"
+#include "SDLGameObject.h"
 class Enemy : public SDLGameObject
 {
 public:

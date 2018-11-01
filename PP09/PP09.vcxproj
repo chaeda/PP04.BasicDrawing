@@ -72,8 +72,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>D:\문수빈\GameFramework\SDL2-2.0.8\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\문수빈\GameFramework\SDL2-2.0.8\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\MSB\GameFramework\SDL2-2.0.8\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\MSB\GameFramework\SDL2-2.0.8\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>

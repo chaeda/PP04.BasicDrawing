@@ -1,12 +1,5 @@
 #pragma once
-#include <iostream>
-#include <SDL.h>
-#include <SDL_image.h>
-#include "TextureManager.h"
 #include "LoaderParams.h"
-#include "Game.h"
-
-
 class GameObject
 {
 public:
@@ -14,6 +7,6 @@ public:
 	virtual void update() = 0;
 	virtual void clean() = 0;
 protected:
-	GameObject(const LoaderParams* pParams) {}
-	virtual ~GameObject() {}
+	GameObject(const LoaderParams* pParams) { }
+	virtual ~GameObject() { }
 };
