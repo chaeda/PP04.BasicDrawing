@@ -1,6 +1,6 @@
 #pragma once
-#include "SDL.h"
-using namespace std;
+#include <SDL.h>
+//using namespace std;
 
 
 
