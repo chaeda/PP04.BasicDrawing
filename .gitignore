@@ -259,3 +259,13 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/PP04.BasicDrawing/Assets/animate-alpha.png
+/PP04.BasicDrawing/Assets/animate.png
+/PP08.SingleTon/animate-alpha.png
+/PP09/Enemy.h
+/PP09/Assets/animate.png
+/PP09/Assets/animate-alpha.png
+/PP09/Enemy.cpp
+/PP08.SingleTon/SDL2.dll
+/PP08.SingleTon/SDL2_image.dll
+/PP08.SingleTon/animate.png
