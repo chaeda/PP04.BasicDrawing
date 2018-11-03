@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{68517194-65B9-4F70-8FFF-63EE6D45847A}</ProjectGuid>
+    <ProjectGuid>{3FA0E6DC-2869-41CD-87CA-C56AC13056EF}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>PP11AbstractClass</RootNamespace>
+    <RootNamespace>PP12Vector2D</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -72,8 +72,9 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>D:\게임프레임워크\SDL2-devel-2.0.8-VC %281%29\SDL2-2.0.8\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\게임프레임워크\SDL2-devel-2.0.8-VC %281%29\SDL2-2.0.8\lib\x64;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>$(VC_ExecutablePath_x64);$(WindowsSDK_ExecutablePath);$(VS_ExecutablePath);$(MSBuild_ExecutablePath);$(FxCopDir);$(PATH);</ExecutablePath>
+    <LibraryPath>D:\GameFrameWork\SDL2-2.0.8\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\GameFrameWork\SDL2-2.0.8\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
@@ -94,7 +95,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2main.lib;SDL2_image.lib;SDL2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -142,23 +143,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="LoaderParams.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="SDLGameObject.h" />
+    <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="Vector2D.h" />
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="GameObject.h" />
-    <ClCompile Include="InputHandler.cpp" />
-    <ClCompile Include="LoaderParams.h" />
-    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="SDLGameObject.cpp" />
     <ClCompile Include="TextureManager.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Enemy.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="SDLGameObject.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="TextureManager.h" />
-    <ClInclude Include="Vector2d.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
