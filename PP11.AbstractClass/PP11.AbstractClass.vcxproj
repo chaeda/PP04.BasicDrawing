@@ -148,6 +148,7 @@
     <ClCompile Include="InputHandler.cpp" />
     <ClCompile Include="LoaderParams.h" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="SDLGameObject.cpp" />
     <ClCompile Include="TextureManager.cpp" />
@@ -155,6 +156,7 @@
   <ItemGroup>
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Monster.h" />
     <ClInclude Include="SDLGameObject.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="TextureManager.h" />

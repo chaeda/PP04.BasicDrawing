@@ -30,15 +30,15 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 		S_monster = new Monster();
 
 
-		F_monster->load(100, 50, 56, 52, "tree");
-		S_monster->load(100, 200, 56, 52, "tree");
+		F_monster->load(100, 50, 64, 64, "tree");
+		S_monster->load(100, 200, 64, 64, "tree");
 
 		
 
 		gameObjects.push_back(F_monster);
 		gameObjects.push_back(S_monster);
 
-	
+		SDL_SetRenderDrawColor(m_pRenderer, 255, 255, 255, 255);
 
 	}
 	else {
@@ -61,8 +61,8 @@ void Game::render()
 }
 void Game::update()
 {
-	m_currentFrame = int(((SDL_GetTicks() / 100) % 6));
-	F_currentFrame = int(((SDL_GetTicks() / 100) % 10));
+	//m_currentFrame = int(((SDL_GetTicks() / 100) % 6));
+	//F_currentFrame = int(((SDL_GetTicks() / 100) % 10));
 
 	for (std::vector<GameObject*>::size_type i = 0;
 		i != m_gameObjects.size(); i++)
@@ -72,7 +72,7 @@ void Game::update()
 }
 void Game::clean()
 {
-	SDL_Delay(6000);
+	//SDL_Delay(6000);
 	std::cout << "cleaning game\n";
 	SDL_DestroyWindow(m_pWindow);
 	SDL_DestroyRenderer(m_pRenderer);

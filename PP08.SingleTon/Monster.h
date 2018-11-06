@@ -1,6 +1,5 @@
 #pragma once
 #include "GameObject.h"
-#include "TextureManager.h"
 
 class Monster : public GameObject
 {
