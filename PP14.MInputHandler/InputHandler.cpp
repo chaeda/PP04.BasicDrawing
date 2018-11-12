@@ -1,4 +1,4 @@
-#include "InputHandler.h"
+﻿#include "InputHandler.h"
 #include "Game.h"
 
 InputHandler* InputHandler::s_pInstance = NULL;
@@ -70,7 +70,7 @@ void InputHandler::update()
 
 void InputHandler::clean()
 {
- 
+	// ÇâÈÄ Ãß°¡ 
 }
 
 void InputHandler::onMouseMove(SDL_Event event)
