@@ -1,4 +1,4 @@
-#include "InputHandler.h"
+/* #include "InputHandler.h"
 #include "Game.h"
 
 InputHandler::InputHandler()
@@ -22,3 +22,4 @@ void InputHandler::update()
 		}
 	}
 }
+*/

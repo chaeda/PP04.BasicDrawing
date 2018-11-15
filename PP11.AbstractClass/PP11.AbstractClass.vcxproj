@@ -72,8 +72,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>D:\MSB\GameFramework\SDL2-2.0.8\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\MSB\GameFramework\SDL2-2.0.8\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\문수빈\GameFramework\20171148\SDL2-2.0.8\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\문수빈\GameFramework\20171148\SDL2-2.0.8\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameObject.h" />
     <ClCompile Include="InputHandler.cpp" />
     <ClCompile Include="LoaderParams.h" />
@@ -154,6 +155,7 @@
     <ClCompile Include="TextureManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\PP05.AnimatingSprite\Game.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Monster.h" />

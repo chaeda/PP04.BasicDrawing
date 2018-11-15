@@ -1,24 +1,27 @@
+#include "GameObject.h"
+#include <vector>
 #include "SDLGameObject.h"
-#include "Game.h"
-SDLGameObject::SDLGameObject(const LoaderParams* pParams) : GameObject(pParams), m_position(pParams->getX(), pParams->getY()),
-m_velocity(0.0f, 0.0f), m_acceleration(0.0f, 0.0f)
+
+void GameObject::load(int x, int y, int width, int height,
+	std::string textureID)
 {
-	m_width = pParams->getWidth();
-	m_height = pParams->getHeight();
-	m_textureID = pParams->getTextureID();
+	m_x = x;
+	m_y = y;
+	m_width = width;
+	m_height = height;
+	m_textureID = textureID;
 	m_currentRow = 1;
 	m_currentFrame = 1;
 }
-void SDLGameObject::draw()
+
+void GameObject::draw(SDL_Renderer* pRenderer)
 {
-	TextureManager::Instance()->drawFrame(m_textureID, (int)m_position.getX(), (int)m_position.getY(),
-		m_width, m_height, m_currentRow, m_currentFrame, TheGame::Instance()->getRenderer());
+	TheTextureManager::Instance()->drawFrame(m_textureID,
+		m_x, m_y, m_width, m_height,
+		m_currentRow, m_currentFrame, pRenderer);
 }
-void SDLGameObject::update()
+
+void GameObject::update()
 {
-	m_velocity += m_acceleration;
-	m_position += m_velocity;
-}
-void SDLGameObject::clean()
-{
+	m_x += 1;
 }
