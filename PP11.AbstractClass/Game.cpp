@@ -1,9 +1,7 @@
 ﻿#include "Game.h"
-#include "Player.h"
-#include "Enemy.h"
-
-bool Game::init(const char* title, int xpos, int ypos,
-	int width, int height, bool fullscreen)
+#include "InputHandler.h"
+Game* Game::s_pInstance = 0;
+bool Game::init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen)
 {
 	if (SDL_Init(SDL_INIT_EVERYTHING) >= 0)
 	{

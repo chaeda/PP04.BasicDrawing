@@ -18,6 +18,8 @@ bool Game::init(const char* title, int xpos, int ypos,
 		}
 
 		m_bRunning = true;
+
+
 		if (!TextureManager::Instance()->load("assets/animate-alpha.png", "animate", m_pRenderer))
 		{
 			return false;
@@ -60,6 +62,22 @@ void Game::quit()
 	m_bRunning = false;
 }
 
+void Game::handleEvents()
+{
+	/*SDL_Event event;
+	if (SDL_PollEvent(&event))
+	{
+	switch (event.type)
+	{
+	case SDL_QUIT:
+	m_bRunning = false;
+	break;
+	default:
+	break;
+	}
+	}*/
+	TheInputHandler::Instance()->update();
+}
 
 void Game::update()
 {

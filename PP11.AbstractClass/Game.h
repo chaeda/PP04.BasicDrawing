@@ -1,7 +1,11 @@
 ﻿#pragma once
-
+#include "SDL.h"
+#include "GameObject.h"
 #include <vector>
-
+#include <iostream>
+#include "Player.h"
+#include "Enemy.h"
+#include "TextureManager.h"
 class Game
 {
 public:
